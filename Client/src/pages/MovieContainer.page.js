@@ -103,7 +103,7 @@ const MovieContainer = () => {
   const handleAddToPlaylist = async () => {
     try {
       await axios.post(
-        "http://localhost:4000/api/movieLists",
+        "https://movie-5a9q.onrender.com/api/movieLists",
         {
           userId: user.profile.email,
           name: "My Playlist",

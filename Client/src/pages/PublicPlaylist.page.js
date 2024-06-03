@@ -12,7 +12,7 @@ const PublicPlaylist = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/api/movieLists/${mailid}`
+          `https://movie-5a9q.onrender.com/api/movieLists/${mailid}`
         );
         setPublicPlaylists(response.data);
         setLoading(false);

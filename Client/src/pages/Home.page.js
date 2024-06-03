@@ -35,7 +35,7 @@ const MovieList = () => {
     const fetchPlaylistMovies = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/api/movieLists/${user.profile.email}`
+          `https://movie-5a9q.onrender.com/api/movieLists/${user.profile.email}`
         );
         const playlists = response.data;
         const playlistMoviesData = playlists.flatMap(
@@ -111,7 +111,7 @@ const MovieList = () => {
         movies: [movie], // Ensure that the movie object is in the required format by the server
       };
       await axios.post(
-        "http://localhost:4000/api/movieLists",
+        "https://movie-5a9q.onrender.com/api/movieLists",
         playlistData
       );
       toast.success("Movie added to playlist successfully!");
@@ -139,7 +139,7 @@ const MovieList = () => {
         ],
       };
       await axios.post(
-        "http://localhost:4000/api/movieLists",
+        "https://movie-5a9q.onrender.com/api/movieLists",
         playlistData
       );
       toast.success("Movie added to playlist successfully!");
@@ -239,7 +239,7 @@ const MovieList = () => {
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               onClick={() => {
                 navigator.clipboard.writeText(
-                  `http://localhost:3000/publicplaylist/${user.profile.email}`
+                  `https://movie-two-rust.vercel.app/publicplaylist/${user.profile.email}`
                 );
                 toast.success("Link copied to clipboard!");
               }}
